@@ -2,7 +2,7 @@
 -- Descrição de Hardware (VHDL) de uma porta XOR de duas entradas
 --
 --            _____				
---      a >--|     |		      a | b | z
+--      a >--|     |          a | b | z
 --           | XOR |--> z    -----------
 --      b >--|_____|          0 | 0 | 0
 --                            0 | 1 | 1

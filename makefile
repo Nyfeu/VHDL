@@ -10,26 +10,15 @@ GHDL = ghdl
 GTKWAVE = gtkwave
 RM = del
 
-# Default target
-all: run
-
-# Analyze VHDL files
-analyze: $(VHDL_FILES)
+# Run a testbench
+$(WAVEFORM): $(VHDL_FILES)
 	$(GHDL) -a --std=08 $^
-
-# Elaborate the testbench
-elaborate: analyze
 	$(GHDL) -e --std=08 $(TESTBENCH)
-
-# Run the simulation and generate the waveform
-compile: elaborate
 	$(GHDL) -r --std=08 $(TESTBENCH) --vcd=$(WAVEFORM)
-
-clean_work: compile
 	$(RM) work-obj08.cf
 
 # Open the waveform in GTKWave
-test: clean_work
+test: $(WAVEFORM)
 	$(GTKWAVE) $(WAVEFORM)
 
 # Clean up generated files in output directory

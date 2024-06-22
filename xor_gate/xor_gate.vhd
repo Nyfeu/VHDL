@@ -1,14 +1,14 @@
 
--- Descrição de Hardware (VHDL) de uma porta AND de duas entradas
+-- Descrição de Hardware (VHDL) de uma porta XOR de duas entradas
 --
---			      _____				
+--            _____				
 --      a >--|     |		      a | b | z
 --           | XOR |--> z    -----------
 --      b >--|_____|          0 | 0 | 0
---            							  0 | 1 | 1
---            							  1 | 0 | 1
---            							  1 | 1 | 0
---            							 -----------
+--                            0 | 1 | 1
+--                            1 | 0 | 1
+--                            1 | 1 | 0
+--                           -----------
 --
 -- AUTOR: André Solano F. R. Maiolini
 -- DATA: 21/06/2024
@@ -18,7 +18,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
---| AND gate |---------------------------------------------------------
+--| XOR gate |---------------------------------------------------------
 
 entity xor_gate is
   

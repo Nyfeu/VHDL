@@ -1,8 +1,17 @@
+
+-- Arquivo de testes (testbench) para o AND gate
+
+--| Libraries |-----------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 
+--| Entidade |------------------------------------
+
 entity and_gate_tb is
 end entity and_gate_tb;
+
+--| Lógica - Testbench |--------------------------
 
 architecture teste of and_gate_tb is
   

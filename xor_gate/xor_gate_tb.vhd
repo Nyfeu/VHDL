@@ -1,8 +1,17 @@
+
+-- Arquivo de testes (testbench) para o XOR gate
+
+--| Libraries |-----------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 
+--| Entidade |------------------------------------
+
 entity xor_gate_tb is
 end entity xor_gate_tb;
+
+--| Lógica - Testbench |--------------------------
 
 architecture teste of xor_gate_tb is
   

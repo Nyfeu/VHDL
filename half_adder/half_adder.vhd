@@ -1,4 +1,18 @@
 
+-- Descrição de Hardware (VHDL) de um HALF_ADDER
+--
+--            ____				
+--      a >--|    |--> sum      a | b | s | c 
+--           | HA |            ---------------
+--      b >--|____|--> carry    0 | 0 | 0 | 0
+--                              0 | 1 | 1 | 0
+--                              1 | 0 | 1 | 0
+--                              1 | 1 | 0 | 1
+--                             ---------------
+--
+-- AUTOR: André Solano F. R. Maiolini
+-- DATA: 22/06/2024
+
 --| Libraries |-------------------------------------------------------
 
 library ieee;

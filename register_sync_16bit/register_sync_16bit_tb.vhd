@@ -17,30 +17,30 @@ architecture teste of register_sync_16bit_tb is
   
   signal data_in  : std_logic_vector(15 downto 0);
   signal enable   : std_logic;
-  signal PR, CL   : std_logic;
-  signal Q, not_Q : std_logic_vector(15 downto 0);
+  signal MR       : std_logic;
   signal CLK      : std_logic := '0';
+  signal data_out : std_logic_vector(15 downto 0);
 
   component register_sync_16bit is
     port (
         data_in   : in  std_logic_vector(15 downto 0);  -- Dados de entrada
         enable    : in  std_logic;                      -- Sinal de habilitação
-        PR, CL    : in  std_logic;                      -- Sinais de controle assíncronos 
+        MR        : in  std_logic;                      -- Sinal de master-reset
         CLK       : in  std_logic;                      -- Sinal de clock
-        Q, not_Q  : out std_logic_vector(15 downto 0)   -- Dados de saída
+        data_out  : out std_logic_vector(15 downto 0)   -- Dados de saída
     );
   end component register_sync_16bit;
 
 begin
 
     REG: register_sync_16bit port map (
-        data_in, enable, PR, CL, CLK, Q, not_Q
+        data_in, enable, MR, CLK, data_out
     );
   
     -- Gerador de clock
     clk_process: process
     begin
-        while now < 15 ns loop
+        while now < 20 ns loop
             clk <= '0';
             wait for 2 ns;
             clk <= '1';
@@ -53,8 +53,7 @@ begin
     begin
 
         -- Definindo entradas de controle assíncronas
-        PR <= '1';
-        CL <= '1';
+        MR <= '1';
 
         -- Test 1: enable = 0
         enable <= '0';
@@ -75,19 +74,12 @@ begin
         data_in <= x"9ABC";
         wait for 3 ns;
 
-        -- Test 5: enable = 1 (PR)
+        -- Test 5: enable = 1 (MR)
         enable <= '0';
-        PR <= '0';
+        MR <= '0';
         data_in <= x"9ABC";
         wait for 3 ns;
-        PR <= '1';
-
-        -- Test 6: enable = 1 (CL)
-        enable <= '0';
-        CL <= '0';
-        data_in <= x"9ABC";
-        wait for 3 ns;
-        CL <= '1';
+        MR <= '1';
 
         wait;
 

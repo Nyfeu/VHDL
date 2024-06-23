@@ -23,7 +23,7 @@ architecture teste of tri_state_buffer_16bit_tb is
     port (
         data_in   : in  std_logic_vector(15 downto 0);  -- Dados de entrada
         enable    : in  std_logic;                      -- Sinal de habilitação
-        data_out  : out std_logic_vector(15 downto 0)          -- Dados de saída
+        data_out  : out std_logic_vector(15 downto 0)   -- Dados de saída
     );
   end component tri_state_buffer_16bit;
 

@@ -1,0 +1,57 @@
+$date
+  Sun Jun 23 02:21:46 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module textio $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module mux_16bit_tb $end
+$var reg 16 ! data_in_1[15:0] $end
+$var reg 16 " data_in_2[15:0] $end
+$var reg 16 # data_out[15:0] $end
+$var reg 1 $ sel $end
+$scope module tri $end
+$var reg 16 % data_in_1[15:0] $end
+$var reg 16 & data_in_2[15:0] $end
+$var reg 1 ' sel $end
+$var reg 16 ( data_out[15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b1111111111111111 !
+b0000000000000000 "
+b0000000000000000 #
+0$
+b1111111111111111 %
+b0000000000000000 &
+0'
+b0000000000000000 (
+#1000000
+b1111111111111111 #
+1$
+1'
+b1111111111111111 (
+#2000000
+b0000000001000010 !
+b0100001000000000 "
+b0100001000000000 #
+0$
+b0000000001000010 %
+b0100001000000000 &
+0'
+b0100001000000000 (
+#3000000
+b0000000001000010 #
+1$
+1'
+b0000000001000010 (
+#4000000

@@ -15,7 +15,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
---| ALU |------------------------------------------------------------------------------------
+--| Contador |--------------------------------------------------------------------------------
 
 entity generic_counter is
     generic(n : integer := 4); -- quantidade de bits do contador

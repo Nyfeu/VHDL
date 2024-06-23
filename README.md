@@ -50,11 +50,11 @@ make VHDL_DIR=and_gate test
 ````
 3. View the last generated waveform: 
 ```
-make VHDL_DIR=and_gate view`;
+make VHDL_DIR=and_gate view;
 ```
 4. Clean up the generated files: 
 ```
-make VHDL_DIR=and_gate clean`.
+make VHDL_DIR=and_gate clean.
 ```
 
 ---

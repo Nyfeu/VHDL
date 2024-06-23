@@ -21,6 +21,7 @@ $(WAVEFORM): $(VHDL_FILES)
 test: $(WAVEFORM)
 	$(GTKWAVE) $(WAVEFORM)
 
+# Visualize the waveform
 view:
 	$(GTKWAVE) $(WAVEFORM)
 

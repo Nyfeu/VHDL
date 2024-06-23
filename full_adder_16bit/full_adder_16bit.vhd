@@ -1,5 +1,5 @@
 
--- Descrição de Hardware (VHDL) de um FULL_ADDER (8 bits)
+-- Descrição de Hardware (VHDL) de um FULL_ADDER (16 bits)
 --
 --                      ____				
 --      a (16 bits) >--|    |--> sum (16 bits)

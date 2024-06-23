@@ -32,6 +32,6 @@ architecture main of mux_16bit is
 begin
 
     -- Seleciona data_in_1 ou data_in_2 => data_out
-    data_out <= data_in_1 when sel = '1' else data_in_2;
+    data_out <= data_in_1 when sel = '0' else data_in_2;
 
 end architecture main;

@@ -40,74 +40,74 @@ begin
   begin
     
     -- 0011 - 0001 = 0010 (2)
-    a <= "0011";
-    b <= "0001";
+    a <= x"3";
+    b <= x"1";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 0010, b_out = 0
+    -- Esperado: dif = 0x2, b_out = 0
 
     -- 0010 - 0001 = 0001 (1)
-    a <= "0010";
-    b <= "0001";
+    a <= x"2";
+    b <= x"1";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 0001, b_out = 0
+    -- Esperado: dif = 0x1, b_out = 0
 
     -- 1000 - 0100 = 0100 (4)
-    a <= "1000";
-    b <= "0100";
+    a <= x"8";
+    b <= x"4";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 0100, b_out = 0
+    -- Esperado: dif = 0x4, b_out = 0
 
     -- 0110 - 0011 = 0011 (3)
-    a <= "0110";
-    b <= "0011";
+    a <= x"6";
+    b <= x"3";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 0011, b_out = 0
+    -- Esperado: dif = 0x3, b_out = 0
 
     -- 0000 - 0001 com borrow in = 1110 (-2)
-    a <= "0000";
-    b <= "0001";
+    a <= x"0";
+    b <= x"1";
     b_in <= '1';
     wait for 1 ns;
-    -- Esperado: dif = 1110, b_out = 1
+    -- Esperado: dif = 0xE, b_out = 1
 
     -- 0101 - 0010 com borrow in = 0010 (3)
-    a <= "0101";
-    b <= "0010";
+    a <= x"5";
+    b <= x"2";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 0011, b_out = 0
+    -- Esperado: dif = 0x3, b_out = 0
 
     -- 0101 - 0011 com borrow in = 0010 (2)
-    a <= "0101";
-    b <= "0011";
+    a <= x"5";
+    b <= x"3";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 0010, b_out = 0
+    -- Esperado: dif = 0x2, b_out = 0
 
     -- 1001 - 0110 com borrow in = 0010 (2)
-    a <= "1001";
-    b <= "0110";
+    a <= x"9";
+    b <= x"6";
     b_in <= '1';
     wait for 1 ns;
-    -- Esperado: dif = 0010, b_out = 0
+    -- Esperado: dif = 0x2, b_out = 0
 
-    -- 0011 - 0101 com borrow in = 1101 (-2)
-    a <= "0011";
-    b <= "0101";
+    -- 0011 - 0101 com borrow in = 1110 (-2)
+    a <= x"3";
+    b <= x"5";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 1110, b_out = 1
+    -- Esperado: dif = 0xE, b_out = 1
 
     -- 0000 - 0000 com borrow in = 0000 (0)
-    a <= "0000";
-    b <= "0000";
+    a <= x"0";
+    b <= x"0";
     b_in <= '0';
     wait for 1 ns;
-    -- Esperado: dif = 0000, b_out = 0
+    -- Esperado: dif = 0x0, b_out = 0
 
     wait;
 

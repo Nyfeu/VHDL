@@ -21,6 +21,9 @@ $(WAVEFORM): $(VHDL_FILES)
 test: $(WAVEFORM)
 	$(GTKWAVE) $(WAVEFORM)
 
+view:
+	$(GTKWAVE) $(WAVEFORM)
+
 # Clean up generated files in output directory
 clean:
 	$(RM) "$(OUTPUT_DIR)\$(TESTBENCH).vcd"

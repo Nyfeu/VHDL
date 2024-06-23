@@ -1,5 +1,5 @@
 
--- Arquivo de testes (testbench) para o Full Adder (4 bits)
+-- Arquivo de testes (testbench) para o Full Adder (16 bits)
 
 --| Libraries |---------------------------------------------
 

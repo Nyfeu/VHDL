@@ -44,10 +44,18 @@ The included Makefile automates the process of compilation, simulation, and resu
 #### Example
 
 1. Navigate to the project directory;
-2. Run the testbench and visualize the waveform: `make VHDL_DIR=<entity_name> test`;
-3. View the last generated waveform: `make VHDL_DIR=<entity_name> view`;
-4. Clean up the generated files: `make VHDL_DIR=<entity_name> clean`.
-
+2. Run the testbench and visualize the waveform:
+```
+make VHDL_DIR=and_gate test
+````
+3. View the last generated waveform: 
+```
+make VHDL_DIR=and_gate view`;
+```
+4. Clean up the generated files: 
+```
+make VHDL_DIR=and_gate clean`.
+```
 
 ---
 

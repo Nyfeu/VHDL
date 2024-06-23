@@ -1,0 +1,63 @@
+$date
+  Sun Jun 23 02:04:09 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module textio $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module tri_state_buffer_16bit_tb $end
+$var reg 16 ! data_in[15:0] $end
+$var reg 16 " data_out[15:0] $end
+$var reg 1 # enable $end
+$scope module tri $end
+$var reg 16 $ data_in[15:0] $end
+$var reg 1 % enable $end
+$var reg 16 & data_out[15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b1111111111111111 !
+bZZZZZZZZZZZZZZZZ "
+0#
+b1111111111111111 $
+0%
+bZZZZZZZZZZZZZZZZ &
+#1000000
+b1111111111111111 "
+1#
+1%
+b1111111111111111 &
+#2000000
+b0000000000000000 !
+bZZZZZZZZZZZZZZZZ "
+0#
+b0000000000000000 $
+0%
+bZZZZZZZZZZZZZZZZ &
+#3000000
+b0000000000000000 "
+1#
+1%
+b0000000000000000 &
+#4000000
+b0000000001000010 !
+bZZZZZZZZZZZZZZZZ "
+0#
+b0000000001000010 $
+0%
+bZZZZZZZZZZZZZZZZ &
+#5000000
+b0000000001000010 "
+1#
+1%
+b0000000001000010 &
+#6000000

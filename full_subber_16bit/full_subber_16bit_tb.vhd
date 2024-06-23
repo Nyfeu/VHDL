@@ -1,17 +1,17 @@
 
--- Arquivo de testes (testbench) para o Full Adder
+-- Arquivo de testes (testbench) para o Full Subber
 
---| Libraries |-----------------------------------
+--| Libraries |--------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 
---| Entidade |------------------------------------
+--| Entidade |---------------------------------------
 
 entity full_subber_16bit_tb is
 end entity full_subber_16bit_tb;
 
---| Lógica - Testbench |--------------------------
+--| Lógica - Testbench |-----------------------------
 
 architecture teste of full_subber_16bit_tb is
   

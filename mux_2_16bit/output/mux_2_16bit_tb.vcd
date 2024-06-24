@@ -1,0 +1,67 @@
+$date
+  Mon Jun 24 00:05:37 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module textio $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module mux_2_16bit_tb $end
+$var reg 16 ! data_in_1[15:0] $end
+$var reg 16 " data_in_2[15:0] $end
+$var reg 16 # data_in_3[15:0] $end
+$var reg 16 $ data_in_4[15:0] $end
+$var reg 1 % sel_1 $end
+$var reg 1 & sel_0 $end
+$var reg 16 ' data_out[15:0] $end
+$scope module tri $end
+$var reg 16 ( data_in_1[15:0] $end
+$var reg 16 ) data_in_2[15:0] $end
+$var reg 16 * data_in_3[15:0] $end
+$var reg 16 + data_in_4[15:0] $end
+$var reg 1 , sel_1 $end
+$var reg 1 - sel_0 $end
+$var reg 16 . data_out[15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b1010101010101010 !
+b1011101110111011 "
+b1100110011001100 #
+b1101110111011101 $
+0%
+0&
+b1010101010101010 '
+b1010101010101010 (
+b1011101110111011 )
+b1100110011001100 *
+b1101110111011101 +
+0,
+0-
+b1010101010101010 .
+#1000000
+1&
+b1011101110111011 '
+1-
+b1011101110111011 .
+#2000000
+1%
+0&
+b1100110011001100 '
+1,
+0-
+b1100110011001100 .
+#3000000
+1&
+b1101110111011101 '
+1-
+b1101110111011101 .
+#4000000

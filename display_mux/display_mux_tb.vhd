@@ -17,16 +17,11 @@ architecture teste of display_mux_tb is
   
     constant n    : integer := 2000;  -- Valor para o clk_freq
 
-    signal clk    : std_logic;
-    signal clk1   : std_logic_vector(2 downto 0);
-    signal MSB    : std_logic_vector(3 downto 0) := "0000";
-    signal ISB    : std_logic_vector(3 downto 0) := "0000";
-    signal LSB    : std_logic_vector(3 downto 0) := "0000";
-    signal Dado   : std_logic_vector(6 downto 0);
-    signal Sel1   : std_logic;
-    signal Sel2   : std_logic;
-    signal Sel3   : std_logic;
-    signal enable : std_logic := '1';
+    signal clk      : std_logic;
+    signal data_in  : std_logic_vector(31 downto 0);
+    signal data_out : std_logic_vector(6  downto 0);
+    signal sel      : std_logic_vector(7  downto 0);
+    signal enable   : std_logic := '1';
 
     component generic_timer
         generic (
@@ -40,14 +35,10 @@ architecture teste of display_mux_tb is
 
     component display_mux
         port ( 
-            MSB  : in  std_logic_vector(3 downto 0);
-            ISB  : in  std_logic_vector(3 downto 0);
-            LSB  : in  std_logic_vector(3 downto 0);
-            Dado : out std_logic_vector(6 downto 0);  -- Segmentos a b c d e f g
-            Sel1 : out std_logic;
-            Sel2 : out std_logic;
-            Sel3 : out std_logic;
-            clk  : in  std_logic
+            data_in  : in  std_logic_vector (31 downto 0) := x"00000000";
+            data_out : out std_logic_vector (6 downto 0);  --segmentos a b c d e f g
+            sel      : out std_logic_vector (7 downto 0);
+            clk      : in  std_logic
         );
     end component display_mux;
 
@@ -59,30 +50,25 @@ begin
             clk_freq => n  -- Mapeia a constante 'n' para o parâmetro genérico
         )
         port map (
-            clk => clk,
+            clk    => clk,
             enable => enable
         );
 
     -- Instancia display_mux
     MUX: display_mux
         port map(
-            MSB  => MSB,
-            ISB  => ISB,
-            LSB  => LSB,
-            Dado => Dado,
-            Sel1 => Sel1,
-            Sel2 => Sel2,
-            Sel3 => Sel3,
-            clk  => clk
+            data_in  => data_in,
+            data_out => data_out,
+            sel      => sel,
+            clk      => clk
         );
 
     -- Processo para estímulo de enable
     process
     begin
+
         -- Teste básico
-        MSB <= "1101";  -- Defina os valores de teste
-        ISB <= "0110";
-        LSB <= "1001";
+        data_in <= x"12345678";
 
         -- Espera para ver o efeito
         wait for 50 ns;

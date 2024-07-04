@@ -18,7 +18,7 @@ architecture teste of display_mux_tb is
     constant n    : integer := 2000;  -- Valor para o clk_freq
 
     signal clk      : std_logic;
-    signal data_in  : std_logic_vector(31 downto 0);
+    signal data_in  : std_logic_vector(15 downto 0);
     signal data_out : std_logic_vector(6  downto 0);
     signal sel      : std_logic_vector(7  downto 0);
     signal enable   : std_logic := '1';
@@ -35,7 +35,7 @@ architecture teste of display_mux_tb is
 
     component display_mux
         port ( 
-            data_in  : in  std_logic_vector (31 downto 0) := x"00000000";
+            data_in  : in  std_logic_vector (15 downto 0) := x"0000";
             data_out : out std_logic_vector (6 downto 0);  --segmentos a b c d e f g
             sel      : out std_logic_vector (7 downto 0);
             clk      : in  std_logic
@@ -68,7 +68,7 @@ begin
     begin
 
         -- Teste básico
-        data_in <= x"12345678";
+        data_in <= x"1234";
 
         -- Espera para ver o efeito
         wait for 50 ns;

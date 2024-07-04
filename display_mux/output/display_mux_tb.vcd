@@ -1,5 +1,5 @@
 $date
-  Wed Jul 03 18:37:05 2024
+  Wed Jul 03 21:53:31 2024
 $end
 $version
   GHDL v0
@@ -17,7 +17,7 @@ $scope module numeric_std $end
 $upscope $end
 $scope module display_mux_tb $end
 $var reg 1 ! clk $end
-$var reg 32 " data_in[31:0] $end
+$var reg 16 " data_in[15:0] $end
 $var reg 7 # data_out[6:0] $end
 $var reg 8 $ sel[7:0] $end
 $var reg 1 % enable $end
@@ -26,7 +26,7 @@ $var reg 1 & clk $end
 $var reg 1 ' enable $end
 $upscope $end
 $scope module mux $end
-$var reg 32 ( data_in[31:0] $end
+$var reg 16 ( data_in[15:0] $end
 $var reg 7 ) data_out[6:0] $end
 $var reg 8 * sel[7:0] $end
 $var reg 1 + clk $end
@@ -38,13 +38,13 @@ $upscope $end
 $enddefinitions $end
 #0
 1!
-b00010010001101000101011001111000 "
+b0001001000110100 "
 b1001111 #
 b11111110 $
 1%
 1&
 1'
-b00010010001101000101011001111000 (
+b0001001000110100 (
 b1001111 )
 b11111110 *
 1+
@@ -222,15 +222,15 @@ b100 .
 0+
 #19000000
 1!
-b0100100 #
+b0000001 #
 b11101111 $
 1&
-b0100100 )
+b0000001 )
 b11101111 *
 1+
 b100 ,
-b0101 -
-b101 .
+b0000 -
+b0 .
 #19500000
 0!
 0&
@@ -269,15 +269,11 @@ b101 .
 0+
 #24000000
 1!
-b0100000 #
 b11011111 $
 1&
-b0100000 )
 b11011111 *
 1+
 b101 ,
-b0110 -
-b110 .
 #24500000
 0!
 0&
@@ -316,15 +312,11 @@ b110 .
 0+
 #29000000
 1!
-b0001111 #
 b10111111 $
 1&
-b0001111 )
 b10111111 *
 1+
 b110 ,
-b0111 -
-b111 .
 #29500000
 0!
 0&
@@ -363,15 +355,11 @@ b111 .
 0+
 #34000000
 1!
-b0000000 #
 b01111111 $
 1&
-b0000000 )
 b01111111 *
 1+
 b111 ,
-b1000 -
-b1000 .
 #34500000
 0!
 0&

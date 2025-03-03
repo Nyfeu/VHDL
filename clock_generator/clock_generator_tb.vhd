@@ -8,21 +8,21 @@ use ieee.std_logic_1164.all;
 
 --| Entidade |-------------------------------------------------------
 
-entity generic_timer_tb is
+entity clock_generator_tb is
 
     constant n : integer := 2000;
 
-end entity generic_timer_tb;
+end entity clock_generator_tb;
 
 --| Lógica - Testbench |---------------------------------------------
 
-architecture teste of generic_timer_tb is
+architecture teste of clock_generator_tb is
   
   signal clk : std_logic;
 
   signal enable : std_logic := '1';
 
-  component generic_timer
+  component clock_generator
     generic (
       clk_freq : integer
     );
@@ -34,7 +34,7 @@ architecture teste of generic_timer_tb is
 
 begin
 
-    TIMER: entity work.generic_timer 
+    TIMER: entity work.clock_generator 
         generic map(n) 
         port map (clk, enable);
   

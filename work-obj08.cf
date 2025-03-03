@@ -1,0 +1,7 @@
+v 4
+file . "clock_generator/clock_generator_tb.vhd" "259b838c54b2900c9f6b2ab624cb2170579a7610" "20250303204223.581":
+  entity clock_generator_tb at 6( 147) + 0 on 21;
+  architecture teste of clock_generator_tb at 19( 444) + 0 on 22;
+file . "clock_generator/clock_generator.vhd" "75bc8b713ee69603552117a064bc2f46d92f834b" "20250303204223.581":
+  entity clock_generator at 14( 358) + 0 on 19;
+  architecture main of clock_generator at 35( 834) + 0 on 20;

@@ -17,7 +17,7 @@ use ieee.numeric_std.all;
 
 --| Timer |----------------------------------------------------------------------------------
 
-entity generic_timer is
+entity clock_generator is
 
     generic(
         clk_freq : integer := 4
@@ -28,11 +28,11 @@ entity generic_timer is
         enable : in std_logic
     );
 
-end entity generic_timer;
+end entity clock_generator;
 
 --| Lógica |----------------------------------------------------------------------------------
 
-architecture main of generic_timer is
+architecture main of clock_generator is
 begin
 
     clock_generator : process
